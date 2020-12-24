@@ -13,8 +13,13 @@ $ cucumber --tags @test
 ```
 
 #### Debugging on local
+For Ubuntu:
 Install VNC Viewer in https://www.realvnc.com/en/connect/download/viewer/
 Use VNC client and connect to http://localhost:5900 with password is `secret`
+
+For Mac:
+Open Finder > Go > Connect to server
+Input server: vnc://:secret@0.0.0.0:5900
 
 #### Conventions and Guidelines
 `features/{feature_name}/*`: Define Features and Scenarios with Gherkin Syntax.
