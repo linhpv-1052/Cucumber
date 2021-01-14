@@ -20,10 +20,14 @@ end
 Capybara.configure do |config|
   config.run_server = false
   config.default_driver = :remote_chrome
-  config.app_host = "https://google.com" # change this to point to your application
+  config.app_host = "http://#{docker_ip}:3000" # change this to point to your application
 end
 
 AllureCucumber.configure do |config|
   config.results_directory = "report/allure-results"
   config.clean_results_directory = true
+end
+
+Before do |scenario|
+  @docker_ip = docker_ip
 end

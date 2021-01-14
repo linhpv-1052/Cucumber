@@ -6,4 +6,5 @@ class GooglePage
     fill_in "q", with: input
     find('.gNO89b').click
   end
+
 end
